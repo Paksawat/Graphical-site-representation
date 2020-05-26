@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="da">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Graphical overview</title>
+</head>
+
+<body>
+
+	<header class="header">
+		<section class="logoContain">
+			<img src="" alt="">
+		</section>
+		<img class="logo" src="media/danfoss_logo.png" alt="">
+		<ul class="navigation">
+			<li><a href="" class="linkActive">Site <img src="media/icons/alarm.svg" alt=""></a></li>
+			<li><a class="linkOff" href="">Pack Controller</a></li>
+			<li><a class="linkOff" href="">Lights</a></li>
+			<li><a class="linkOff" href="">HVAC</a></li>
+		</ul>
+		<img class="profileIcon" src="media/icons/profile.svg" alt="">
+
+		<article class="profileOptions">
+			<div class="pointer"></div>
+			<section class="storeInfo">
+				<img class="storeLogo" src="media/store_logo.png" alt="">
+				<p class="street">Perlegade 81</p>
+				<p class="zipcode">6400</p>
+				<p class="city">Sønderborg</p>
+				<p class="number">74 18 30 00</p>
+			</section><!--
+			--><section class="userOptions">
+				<h4>Username</h4>
+				<ul>
+					<li><a href="">Account settings</a></li>
+					<li><a href="">Support</a></li>
+					<li><a class="logout" href="">Log out</a></li>
+				</ul>
+			</section>
+		</article>
+
+		<article class="smInfo">
+			<h3>ADAP-KOOL©</h3>
+			<p>SM70 v1.0.2</p>
+		</article>
+
+
+	</header>
+
+<section class="grid">
+
+
+	<aside class="sidebar">
+		<section class="quickInfo">
+			<p class="unitName">#ZS-W419-001 <img src="media/icons/online.svg" alt=""></p>
+			<img src="" alt="">
+			<p class="mainTemp">-2,0<span class="shrink">°C</span></p>
+
+			<section class="displayIcons">
+				<div class="sideInfoIcon ecoIcon"></div>
+				<div class="sideInfoIcon fanIcon"></div>
+				<div class="sideInfoIcon defrostIcon"></div>
+				<div class="sideInfoIcon coolingIcon sideIconActive"></div>
+			</section>
+			
+
+		</section>
+
+		<p class="tempCut">Thermostat cutin temp. <span class="tempCutSpan">-2,0°C</span></p>
+		<p class="tempCut">Thermostat cutout temp. <span class="tempCutSpan">0,0°C</span></p>
+
+		<section class="alarmings">
+			<h2>Alarms & warnings</h2>
+			<img src="media/icons/highTemp.svg" alt=""><p class="warText"> High temperature - Door open <span class="alarmTime">12:16</span></p> 
+			
+			<img src="media/icons/error.svg" alt=""><p class="alarmText"> Malfunction - No power <span class="alarmTime">12:05</span></p>
+		</section>
+		
+		<h2>Main switch</h2>
+		
+		<div class="switch">
+			<input class="switchBar mainSwitch" type="range" min="1" max="3" value="1" onchange="updateValue(this.value);">
+			<p class="switchOne mainSwitchActive mainSwitchBtn">Manual</p><p class="switchTwo mainSwitchBtn">Stop</p><p class="switchThree mainSwitchBtn">Start</p>
+		</div>
+		
+		<h2>Case cleaning mode</h2>
+		<div class="switch">
+			<input class="switchBar" type="range" min="1" max="3" value="1" onchange="updateValue2(this.value);">
+			<p class="caseSwitchOne caseSwitchActive caseSwitchBtn">Off</p><p class="caseSwitchTwo caseSwitchBtn">Fans run</p><p class="caseSwitchThree caseSwitchBtn">Cleaning</p>
+		</div>
+
+		<h2>Thermostat cutout</h2>
+		
+		<div class="tempCutout">
+			<input type="text" value="-2,0">
+		  	<p>°C</p>
+		</div>
+		
+		<button class="defrostBtn">
+			Start defrost
+		</button>
+	</aside>
+
+	<section class="sectionTab">
+		<img class="backBtn" src="media/icons/back_arrow.svg" alt="">
+		<button class="sectionTabBtn tabBtnActive">B11 <img src="media/icons/alarm.svg" alt=""></button>
+		<button class="sectionTabBtn">B12 <img src="media/icons/alarm.svg" alt=""></button>
+		<button class="sectionTabBtn">B13</button>
+	</section>
+
+	<section class="mapOverview">
+		<img src="media/smallMap.PNG" alt="">
+	</section>
+
+	<section class="extTemp">
+		<p>Exterior temperature:</p>
+		<p>16.0°C</p>
+	</section>
+
+	<section class="sectionMap">
+		<section class="mapInnerBorder">
+			<div class="unit model1 u1c1">-2°C</div>
+			<div class="unit model1 u1c2">-2°C</div>
+			<div class="unit model1 u1c3">-2°C</div>
+			<div class="unit model1 u1c4">-2°C</div>
+			<div class="unit model1 u1c5">-2°C</div>
+
+			<div class="unit model2 u2c1"><span class="textRotate">-2°C</span></div>
+			<div class="unit model2 u2c2"><span class="textRotate">-2°C</span></div>
+			<div class="unit model2 u2c3"><span class="textRotate">-2°C</span></div>
+			<div class="unit model2 u2c4"><span class="textRotate">-2°C</span></div>
+			
+
+			<div class="unit model3 u3c1">-2°C</div>
+			<div class="unit model3 u3c2">-2°C</div>
+			<div class="unit model3 u3c3">-2°C</div>
+
+			
+
+			<div class="unit model4 u4c1">-2°C</div>
+			<div class="unit model4 u4c2">-2°C</div>
+			<div class="unit model4 u4c3">-2°C</div>
+
+			<div class="unit model1 u5c1">-2°C</div>
+			<div class="unit model1 u5c2">-2°C</div>
+			<div class="unit model1 u5c3">-2°C</div>
+			<div class="unit model1 u5c4">-2°C</div>
+			<div class="unit model1 u5c5">-2°C</div>
+			<div class="unit model1 u5c6">-2°C</div>
+			<div class="unit model1 u5c7"></div>
+			<div class="unit model1 u5c8">-2°C</div>
+			<div class="unit model1 u5c9"></div>
+			<div class="unit model1 u5c10 clickUnit">-2°C
+				<div class="hoverInfo">
+					<article class="ccInfo">
+						<p># ZS-W419-020</p>
+						<img src="media/icons/online.svg" alt="">
+					</article>
+					
+					<section class="diagram">
+						<p class="lastTemps">Temp. last 5 hours - celsius</p>
+						<div class="chartBar barOne">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barTwo">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barThree">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barFour">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barFive">
+							<p>-2°</p>
+						</div>
+						<p class="chartTime">11:00</p>
+						<p class="chartTime">12:00</p>
+						<p class="chartTime">13:00</p>
+						<p class="chartTime">14:00</p>
+						<p class="chartTime">15:00</p>
+
+					</section>
+					<article class="outputs">
+						<div class="hoverEco"></div>
+						<div class="hoverFan"></div>
+						<div class="hoverDefrost"></div>
+						<div class="hoverCooling"></div>
+						<div class="hoverAlarm hoverIconActive"></div>
+						<div class="hoverLight"></div>
+					</article>
+					<div class="hoverPointer"></div>
+
+				</div>
+			</div>
+			
+
+			<div class="unit model1 u6c1 clickUnit">-2°C
+				<div class="hoverInfo">
+					<article class="ccInfo">
+						<p># ZS-W419-012</p>
+						<img src="media/icons/online.svg" alt="">
+					</article>
+					
+					<section class="diagram">
+						<p class="lastTemps">Temp. last 5 hours - celsius</p>
+						<div class="chartBar barOne">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barTwo">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barThree">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barFour">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barFive">
+							<p>-2°</p>
+						</div>
+						<p class="chartTime">11:00</p>
+						<p class="chartTime">12:00</p>
+						<p class="chartTime">13:00</p>
+						<p class="chartTime">14:00</p>
+						<p class="chartTime">15:00</p>
+
+					</section>
+					<article class="outputs">
+						<div class="hoverEco"></div>
+						<div class="hoverFan"></div>
+						<div class="hoverDefrost"></div>
+						<div class="hoverCooling hoverIconActive"></div>
+						<div class="hoverAlarm"></div>
+						<div class="hoverLight hoverIconActive "></div>
+					</article>
+					<div class="hoverPointer"></div>
+
+				</div>
+			</div>
+
+			<div class="unit model1 u6c2">-2°C</div>
+			<div class="unit model1 u6c3">-2°C</div>
+			<div class="unit model1 u6c4">-2°C</div>
+			<div class="unit model1 u6c5">-2°C</div>
+			<div class="selectedUnit unit model1 u6c6 clickUnit">-2°C
+
+				<div class="hoverInfo">
+					<article class="ccInfo">
+						<p># ZS-W419-001</p>
+						<img src="media/icons/online.svg" alt="">
+					</article>
+					
+					<section class="diagram">
+						<p class="lastTemps">Temp. last 5 hours - celsius</p>
+						<div class="chartBar barOne">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barTwo">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barThree">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barFour">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barFive">
+							<p>-2°</p>
+						</div>
+						<p class="chartTime">11:00</p>
+						<p class="chartTime">12:00</p>
+						<p class="chartTime">13:00</p>
+						<p class="chartTime">14:00</p>
+						<p class="chartTime">15:00</p>
+
+					</section>
+					<article class="outputs">
+						<div class="hoverEco"></div>
+						<div class="hoverFan"></div>
+						<div class="hoverDefrost"></div>
+						<div class="hoverCooling hoverIconActive"></div>
+						<div class="hoverAlarm hoverIconActive"></div>
+						<div class="hoverLight hoverIconActive "></div>
+					</article>
+					<div class="hoverPointer"></div>
+
+				</div>
+			</div>
+			<div class="unit model1 u6c7">-2°C</div>
+			<div class="unit model1 u6c8">-2°C</div>
+			<div class="unit model1 u6c9">-2°C</div>
+			<div class="unit model1 u6c10">-2°C</div>
+
+			<div class="unit model1 u7c1">-2°C</div>
+			<div class="unit model1 u7c2">-2°C</div>
+			<div class="unit model1 u7c3">-2°C</div>
+			<div class="unit model1 u7c4 clickUnit">-2°C
+				<div class="hoverInfo">
+					<article class="ccInfo">
+						<p># ZS-W419-016</p>
+						<img src="media/icons/online.svg" alt="">
+					</article>
+					
+					<section class="diagram">
+						<p class="lastTemps">Temp. last 5 hours - celsius</p>
+						<div class="chartBar barOne">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barTwo">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barThree">
+							<p>-5°</p>
+						</div>
+						<div class="chartBar barFour">
+							<p>-3°</p>
+						</div>
+						<div class="chartBar barFive">
+							<p>-2°</p>
+						</div>
+						<p class="chartTime">11:00</p>
+						<p class="chartTime">12:00</p>
+						<p class="chartTime">13:00</p>
+						<p class="chartTime">14:00</p>
+						<p class="chartTime">15:00</p>
+
+					</section>
+					<article class="outputs">
+						<div class="hoverEco"></div>
+						<div class="hoverFan"></div>
+						<div class="hoverDefrost hoverIconActive"></div>
+						<div class="hoverCooling"></div>
+						<div class="hoverAlarm"></div>
+						<div class="hoverLight hoverIconActive "></div>
+					</article>
+					<div class="hoverPointer"></div>
+
+				</div>
+			</div>
+			
+
+			<div class="unit model1 u7c5">-2°C</div>
+			<div class="unit model1 u7c6">-2°C</div>
+			<div class="unit model1 u7c7">-2°C</div>
+			<div class="unit model1 u7c8">-2°C</div>
+			<div class="unit model1 u7c9">-2°C</div>
+			<div class="unit model1 u7c10">-2°C</div>
+
+			<div class="unit model1 u8c1">-2°C</div>
+			<div class="unit model1 u8c2">-2°C</div>
+			<div class="unit model1 u8c3">-2°C</div>
+			<div class="unit model1 u8c4">-2°C</div>
+			<div class="unit model1 u8c5">-2°C</div>
+			<div class="unit model1 u8c6">-2°C</div>
+			<div class="unit model1 u8c7">-2°C</div>
+			<div class="unit model1 u8c8">-2°C</div>
+			<div class="unit model1 u8c9">-2°C</div>
+			<div class="unit model1 u8c10">-2°C</div>
+
+		</section>
+		
+		
+
+	</section>
+</section>
+	
+
+<script src="script/script.js"></script>
+</body>
+</html>
